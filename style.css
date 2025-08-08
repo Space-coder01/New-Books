@@ -1,3 +1,34 @@
 .c_icon {
   margin-top: 15px;
 }
+
+#p2text {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(46, 63, 81);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+#p2text2rd {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+#sr_page_title {
+  color: rgb(46, 63, 81);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: none;
+  margin: 8px 0px 20px;
+}
+
+#logoicon {
+  margin-top: 26px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F5515F" offset="0%"></stop>
+            <stop stop-color="#9F041B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Answer-Questions-about-your-credit-report" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="51" transform="translate(-615.000000, -187.000000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(615.000000, 187.000000)">
+                <circle id="Oval-5" stroke="url(#linearGradient-1)" stroke-width="7" cx="25" cy="25" r="21.5"></circle>
+                <path d="M25.7936508,13.7853692 L25.7936508,26.6908213" id="Line-2" stroke="#273749" stroke-width="6" stroke-linecap="round"></path>
+                <path d="M25.3968254,35.5079365 L25.3968254,35.9047619" id="Line-2-Copy" stroke="#273749" stroke-width="6" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
